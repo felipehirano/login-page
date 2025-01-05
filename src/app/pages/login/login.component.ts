@@ -24,4 +24,8 @@ export class LoginComponent {
     });
   }
 
+  submitedForm() {
+    console.log("ACTIONED BUTTON");
+  }
+
 }
