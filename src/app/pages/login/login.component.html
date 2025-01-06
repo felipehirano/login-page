@@ -2,9 +2,10 @@
   [title]="'Login into your account'"
   [primaryButtonText]="'Login Now'"
   [secondaryButtonText]="'Signup Now'"
-  (submitedForm)="submitedForm()"
+  (submit)="submit()"
+  (navigate)="navigate()"
 >
-  <form [formGroup]="loginForm ">
+  <form [formGroup]="loginForm">
     <app-primary-input
       formControlName="email"
       inputName="email"

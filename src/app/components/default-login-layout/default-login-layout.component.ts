@@ -12,10 +12,14 @@ export class DefaultLoginLayoutComponent {
   @Input() primaryButtonText!: string;
   @Input() secondaryButtonText!: string;
 
-  @Output() submitedForm = new EventEmitter();
+  @Output("submit") onSubmit = new EventEmitter();
+  @Output("navigate") onNavigate = new EventEmitter();
 
   submit(): void {
-    this.submitedForm.emit();
+    this.onSubmit.emit();
   }
 
+  navigate(): void {
+    this.onNavigate.emit();
+  }
 }
